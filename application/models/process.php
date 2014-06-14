@@ -146,9 +146,9 @@ class Process extends CI_Model
 		
    		$id = $this->input->get_post('id');
    		if ($skip!="skip") {
-		   	$data["pic_url"]=base_url()."img/profile_pics/".md5($id).".png";
+		   	$data["pic_url"]="img/profile_pics/".md5($id).".png";
    		}else{
-		   	$data["pic_url"]=base_url()."img/profile_pics/default.png";
+		   	$data["pic_url"]="img/profile_pics/default.png";
    		}
 
 	   	if ($type == "update") {

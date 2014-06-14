@@ -67,7 +67,7 @@
                                 </div>
                             </div>
                             <div class="col-sm-2 col-xs-1 col-md-3 text-right">
-                                <input type="submit" value="submit" class="btn btn-info" name="login">
+                                <input type="submit" value="Login" class="btn btn-info" name="login">
                             </div>
                         </div>
                         <?php if ($this->uri->segment(3)==1) {?>

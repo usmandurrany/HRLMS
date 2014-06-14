@@ -1,5 +1,4 @@
-
-	<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 	
 	class Uploads extends CI_Controller {
 	
@@ -24,7 +23,7 @@
 				if ( ! $this->upload->do_upload("picture"))
 				{
 					$error = $this->upload->display_errors();
-					echo "<"."script".">alert('".print_r($error)."');</"."script".">";
+					// echo "<"."script".">alert('".print_r($error)."');</"."script".">";
 
 				}
 				else{

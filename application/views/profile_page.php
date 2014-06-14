@@ -51,7 +51,7 @@ $("#form_pic").on("submit", function(event) {
     <div class="panel-body">
         <form class="form-horizontal" id="form" method="post" action="<?php echo base_url();?>index.php/formProcess/edit_emp">
             <div class="col-xs-2">
-                <img src="<?php if(($row->pic_url!=" ")||($row->pic_url!="")||($row->pic_url!="null")||($row->pic_url!="undefined")){ echo $row->pic_url;}else{echo base_url()."img/profile_pics/default.png ";} ?>" class="img-thumbnail img-responsive" alt="Profile picture_id" style="display:block;width:200px;" />
+                <img src="<?php if($row->pic_url!="null"){ echo base_url().$row->pic_url;}else{echo base_url()."img/profile_pics/default.png ";} ?>" class="img-thumbnail img-responsive" alt="Profile picture_id" style="display:block;width:200px;" />
             </div>
             <div class="col-xs-10 form-group">
                 <div class="col-xs-2">
