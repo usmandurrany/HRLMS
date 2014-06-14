@@ -38,7 +38,7 @@
     <div class="panel-body">
  <h3>Display Picture</h3>
 
-        <form method="post" id="form" enctype="multipart/form-data" action="<?php echo base_url();?>index.php/uploads/emp_pic?id=<?php echo $id;?>">
+        <form method="post" id="form" enctype="multipart/form-data" action="<?php echo base_url();?>index.php/uploads/emp_pic/create_new?id=<?php echo $id;?>">
             <div class="col-xs-12">
                 <input type="file" name="picture" id="picture">
             </div>

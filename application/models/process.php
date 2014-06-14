@@ -185,8 +185,6 @@ class Process extends CI_Model
 		   	$this->db->update('employees', $pic_id);
 	   	}
 
-
-
 	   	return true;
     }
 

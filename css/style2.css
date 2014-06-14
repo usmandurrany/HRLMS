@@ -13,6 +13,9 @@ background: #6AA6D6 url(../img/devoops_pattern_b10.png) 0 0 repeat;
   clear: both !important;
   
 }
+input[name="email"]{
+  text-transform: none !important;
+}
 .caret{
   position: absolute;
   top: 25px;
