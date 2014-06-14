@@ -23,7 +23,7 @@ $page="reports";
                     }
                 }
                 ?>
-                <?php if(isset($_POST["report"])){ if($this->uri->segment(3)=="leave_rpt" ){echo "Employee name: <b>".$this->input->get_post('ename'). "</b> <div style='float:right'> Date: <b>".$this->input->get_post('from'). " - ".$this->input->get_post('to'). "</b></div>";}elseif ($this->uri->segment(3)=="emp_rpt" ){echo "Employee Report for ".$string;}}?>
+                <?php if(isset($_POST["report"])){ if($this->uri->segment(3)=="leave_rpt" ){echo "Employee name: <b>".$this->input->get_post('ename'). "</b> <div style='float:right'>&nbsp; Date: <b>".$this->input->get_post('from'). " - ".$this->input->get_post('to'). "</b></div>";}elseif ($this->uri->segment(3)=="emp_rpt" ){echo "Employee Report for ".$string;}}?>
             </td>
         </tr>
     </table>
@@ -106,6 +106,7 @@ elseif (isset($_POST["report"])){
                     <th>From</th>
                     <th>To</th>
                     <th class="extra">Reason</th>
+                    <th>Days</th>
                     <th>Type</th>
                 </tr>
             </thead>
@@ -132,15 +133,21 @@ elseif (isset($_POST["report"])){
                         <?php echo $row->reason; ?>
                     </td>
                     <td>
+                        <?php echo $row->days; ?>
+                    </td>
+                    <td>
                         <?php echo $row->type; ?>
                     </td>
                 </tr>
                 <?php }?>
             </tbody>
+            <?php 
+                }else {echo $result;}?>
             <tfoot>
                 <tr>
                     <td class="extra"></td>
                     <td class="extra"></td>
+                    <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -150,8 +157,6 @@ elseif (isset($_POST["report"])){
                     </td>
                 </tr>
             </tfoot>
-            <?php 
-                }else {echo $result;}?>
         </table>
     </div>
 </div>

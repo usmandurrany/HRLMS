@@ -74,7 +74,7 @@
                             <div class="form-group" style="margin-bottom: -35px;">
                                 <div class="col-xs-10 col-sm-7 col-md-12">
                                     <div class="alert alert-danger alert-dismissable">
-                                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                                         <strong>Error: </strong> Incorrect Username and/or Password.
                                     </div>
                                 </div>
