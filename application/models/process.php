@@ -55,12 +55,17 @@ class Process extends CI_Model
 
 	   	$data["name"]=$this->input->post('ename');
 	  	$data["type"]=$this->input->post('type');
-	    if($data["type"]=="Full Leave"){
+	    if(($data["type"]=="Full Leave") || ($data["type"] == "3 Late 1 Leave")){
 		   $data["from"]=$this->input->post('date-from');
 		   $data["to"]=$this->input->post('date-to');
 
 	       $data["days"]=$this->calc_days($data["from"],$data["to"]);
 	       $data["weight"]=1;
+
+	       if  ($data["type"] == "3 Late 1 Leave"){
+	       		$data["type"] = "3 Late";
+	       }
+
 	    }
 		else{
 		   $data["from"]=$this->input->post('time-from');

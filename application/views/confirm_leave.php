@@ -25,10 +25,13 @@ if (isset($_GET["do"])){
 <script>
 $(document).ready(function() {
     var datepicker = $('.datepicker');
+    var late = $('.late');
     var from = $('.from');
     var to = $('.to');
-
-    if ($('#type').val() == "Full Leave") {
+    if ($('#type').val() == "3 Late 1 Leave") {
+        late.addClass("hidden");
+}
+    else if ($('#type').val() == "Full Leave") {
         //alert(this.value)
         from.addClass('hidden');
         to.addClass('hidden');
@@ -45,14 +48,20 @@ $(document).ready(function() {
     $('#type').on('change', function() {
         //alert( this.value ); // or $(this).val()
 
-        if (this.value == "Full Leave") {
+    if ($('#type').val() == "3 Late 1 Leave") {
+        late.addClass("hidden");
+}
+    else if ($('#type').val() == "Full Leave") {
             //alert(this.value)
+            late.removeClass("hidden");
             from.addClass('hidden');
             to.addClass('hidden');
             datepicker.removeClass('hidden');
 
         } else if ((this.value == "Half Day") || (this.value == "Short Leave")) {
             //alert(this.value)
+            late.removeClass("hidden");
+
             from.removeClass('hidden');
             to.removeClass('hidden');
             datepicker.addClass('hidden');
@@ -93,10 +102,12 @@ $(document).ready(function() {
                 <select class="form-control" id="type" name="type" value="">
                     <option><?php if($this->uri->segment(5) == "edit"){ echo $row->type;}?></option>
                     <option>Short Leave</option>
+                    <option>3 Late 1 Leave</option>
                     <option>Full Leave</option>
                     <option>Half Day</option>
                 </select>
             </div>
+            <div class="late">
             <div class="col-xs-6 col-sm-6">
                 <label>From:</label>
                 
@@ -109,6 +120,7 @@ $(document).ready(function() {
                                             <div class="bfh-datepicker hidden datepicker" data-name="date-to" data-date="<?php if($this->uri->segment(5) == "edit"){  echo $row->to;}?>"></div>
                                             <div class="bfh-timepicker to" data-name="time-to" data-date="<?php if($this->uri->segment(5) == "edit"){  echo $row->to;}?>"></div>
 
+            </div>
             </div>
             <div class="col-xs-12 col-sm-12">
                 <label for="fname">Reason:</label>
