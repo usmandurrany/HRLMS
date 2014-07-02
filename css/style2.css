@@ -2434,4 +2434,7 @@ input[type="file"]{
   #branding{
     display: block !important;
   }
+  .date,.name{
+    display: none;
+  }
 }

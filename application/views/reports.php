@@ -101,8 +101,7 @@ elseif (isset($_POST["report"])){
             <thead>
                 <tr>
                     <th class="extra">#</th>
-                    <th>Name</th>
-                    <th>Date</th>
+                    <th class="name">Name</th>
                     <th>From</th>
                     <th>To</th>
                     <th class="extra">Reason</th>
@@ -120,9 +119,7 @@ elseif (isset($_POST["report"])){
                     <td class="name">
                             <?php echo $row->name; ?>
                     </td>
-                    <td>
-                        <?php echo date( 'd-m-Y', strtotime($row->date)); ?>
-                    </td>
+                    
                     <td>
                         <?php echo $row->from; ?>
                     </td>
@@ -146,12 +143,11 @@ elseif (isset($_POST["report"])){
             <tfoot>
                 <tr>
                     <td class="extra"></td>
-                    <td class="extra"></td>
+                    <td class="extra name"></td>
                     <td></td>
                     <td></td>
+                    <td style="text-align:right;font-weight:bold">Leaves left:</td>
                     <td></td>
-                    <td></td>
-                    <td style="text-align:right;font-weight:bold">Total Leaves left:</td>
                     <td>
                         <?php echo $num_leaves; ?>
                     </td>

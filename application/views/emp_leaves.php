@@ -25,7 +25,6 @@ include "db_conn.php";
             <thead>
                 <tr>
                     <th class="extra">#</th>
-                    <th>Date</th>
                     <th class="extra">Name</th>
                     <th>From</th>
                     <th>To</th>
@@ -42,9 +41,7 @@ include "db_conn.php";
                     <td class="extra">
                         <?php echo $row->id ?>
                     </td>
-                    <td>
-                        <?php echo date('d-m-Y',strtotime($row->date)); ?>
-                    </td>
+                    
                     <td class="extra">
                         <?php echo $row->name ?>
                     </td>

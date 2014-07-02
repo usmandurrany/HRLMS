@@ -19,7 +19,6 @@
             <thead>
                 <tr>
                     <th class="extra">#</th>
-                    <th>Date</th>
                     <th>Name</th>
                     <th>From</th>
                     <th>To</th>
@@ -35,7 +34,6 @@
                 <?php foreach($result as $row){?>
                 <tr>
                         <td class="extra"><?php echo $row->id ?></td>
-                        <td><?php echo date('d/m/Y',strtotime($row->date)); ?></td>
                         <td class="name"><a href="<?php echo base_url();?>index.php/view/view_profile_page/<?php echo $row->emp_id; ?>" class="ajax-link" ><?php echo $row->name; ?></a></td>
                         <td><?php echo $row->from; ?></td>
                         <td class="extra"><?php echo $row->to; ?></td>
