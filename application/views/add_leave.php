@@ -58,10 +58,10 @@ $(function() {
                 </div>
             </div>
             <div class="form-group">
-                <label for="date" class="col-sm-2">Date</label>
+                <label for="date" class="col-sm-2">Today's Date:</label>
                 <div class="col-sm-10 has-feedback">
 
-                    <div class="bfh-datepicker" data-name="date"></div>
+                    <input name="date" value="<?php echo date('d-m-Y'); ?>" disabled="disabled" class="form-control">
 
                 </div>
             </div>

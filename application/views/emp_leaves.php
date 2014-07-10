@@ -12,7 +12,9 @@ include "db_conn.php";
 
 
                 </h1>
-                
+                <a href="<?php echo base_url();?>index.php/view/view_profile_page/<?php echo $this->uri->segment(3);?>" class="ajax-link leaves btn <?php if(($num_leaves>=0)&&($num_leaves<=10)){echo " btn-danger ";}elseif(($num_leaves>10)&&($num_leaves<=20)){echo "btn-warning ";}elseif(($num_leaves>20)&&($num_leaves<=30)){echo "btn-success ";} ?>">
+                    Back
+                </a>
             </div>
 
         </div>
