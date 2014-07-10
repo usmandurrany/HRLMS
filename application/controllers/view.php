@@ -128,8 +128,13 @@ class View extends CI_Controller {
 
 	    elseif(($page=='all_leaves')||($page=="emp_leaves"))
 	    {
-	        $this->process->delete_leave($id);
+	        $emp_id = $this->process->delete_leave($id);
+	        if($page=='all_leaves'){
 		        redirect("view/view_".$page);
+	        }
+		    else if($page=="emp_leaves"){
+		        redirect("view/view_".$page."/".$emp_id);
+		    }
 
 
 	    }

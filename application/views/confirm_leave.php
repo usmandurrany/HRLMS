@@ -111,14 +111,14 @@ $(document).ready(function() {
             <div class="col-xs-6 col-sm-6">
                 <label>From:</label>
                 
-                <div class="bfh-datepicker hidden datepicker" data-name="date-from" data-date="<?php if($this->uri->segment(5) == "edit"){  echo $row->from;}?>"></div>
-                                            <div class="bfh-timepicker from" data-name="time-from" data-date="<?php if($this->uri->segment(5) == "edit"){ echo $row->from;}?>"></div>
+                <div class="bfh-datepicker hidden datepicker" data-name="date-from" data-date="<?php if($this->uri->segment(5) == "edit"){  echo $row->from;}else{echo date('d/m/Y');}?>" data-required></div>
+                                            <div class="bfh-timepicker from" data-name="time-from" data-date="<?php if($this->uri->segment(5) == "edit"){ echo $row->from;}?>" data-required></div>
             </div>
             <div class="col-xs-6 col-md-6">
                 <label>To:</label>
                 
-                                            <div class="bfh-datepicker hidden datepicker" data-name="date-to" data-date="<?php if($this->uri->segment(5) == "edit"){  echo $row->to;}?>"></div>
-                                            <div class="bfh-timepicker to" data-name="time-to" data-date="<?php if($this->uri->segment(5) == "edit"){  echo $row->to;}?>"></div>
+                                            <div class="bfh-datepicker hidden datepicker" data-name="date-to" data-date="<?php if($this->uri->segment(5) == "edit"){  echo $row->to;}else{echo date('d/m/Y');}?>" data-required></div>
+                                            <div class="bfh-timepicker to" data-name="time-to" data-date="<?php if($this->uri->segment(5) == "edit"){  echo $row->to;}?>" data-required></div>
 
             </div>
             </div>

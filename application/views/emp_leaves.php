@@ -60,7 +60,7 @@ include "db_conn.php";
                                             <td class="extra"><?php echo $row->days; ?></td>
 
 <td><a href="javascript: void(0);" id="<?php echo $row->id ?>" name="<?php echo $row->name; ?>" page="emp_leaves" class="delete"><span class="glyphicon glyphicon-trash"></span></a>
-<a href="<?php echo base_url();?>index.php/view/view_profile_page/<?php echo $id;?>" class="ajax-link"><span class="glyphicon glyphicon-pencil"></span></a></td> 
+<a href="<?php echo base_url();?>index.php/view/view_conf_leave/<?php echo $id;?>/<?php echo $row->id ?>/edit" class="ajax-link"><span class="glyphicon glyphicon-pencil"></span></a></td> 
                 </tr>
                 <?php }?>
             </tbody>
@@ -73,7 +73,7 @@ include "db_conn.php";
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td></td>
+
                     <td style="text-align:right;font-weight:bold">Total Leaves left:</td>
                     <td>
                         <?php echo $num_leaves; ?>

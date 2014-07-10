@@ -217,9 +217,20 @@ class Process extends CI_Model
     public function delete_leave($id)
     {	
     	$this->db->where('id', $id);
+    	$this->db->select('emp_id');
+    	$query = $this->db->get('leaves');
+
+    	foreach ($query->result() as $row) {
+    		$data["emp_id"] = $row->emp_id;
+    	}
+
+    	$this->db->where('id', $id);
     	$this->db->delete('leaves');
 
-    	$this->update_num_leaves($id);
+
+    	$this->update_num_leaves($data["emp_id"]);
+
+    	return $data["emp_id"];
     }
 	
 }
